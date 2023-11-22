@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/contacts', function () {
     return "<h1>All contacts!!!</h1>";
 });
+
+Route::get('/contacts/create', function () {
+    return "<h1>Add new contact</h1>";
+});
