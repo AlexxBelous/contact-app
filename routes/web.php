@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('contacts.index');
+    return view('welcome');
 });
 
 Route::get('/contacts', function () {
-    return "<h1>All contacts!!!</h1>";
+    return view('contacts.index');
 })->name('contacts.index');
 
 Route::get('/contacts/create', function () {
@@ -28,6 +28,3 @@ Route::get('/contacts/create', function () {
 Route::get('/contacts/{id}', function ($id) {
     return "Contact " . $id;
 })->name('contacts.show');
-
-
-
