@@ -37,5 +37,8 @@ Route::get('/contacts/{id}', function ($id) {
     return "Contact " . $id;
 })->name('contacts.show');
 
+Route::fallback(function () {
+    return "<h1>Sorry, the page does not exist.</h1>";
+});
 
 
