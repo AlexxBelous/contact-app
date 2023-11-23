@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/contacts', function () {
-    return "<h1>All contacts!!!</h1>";
+    return "<h1>All contacts</h1>";
 })->name('contacts.index');
 
 Route::get('/contacts/create', function () {
@@ -28,9 +28,3 @@ Route::get('/contacts/create', function () {
 Route::get('/contacts/{id}', function ($id) {
     return "Contact " . $id;
 })->name('contacts.show');
-
-Route::fallback(function () {
-    return "<h1>Sorry, the page does not exist.</h1>";
-});
-
-
