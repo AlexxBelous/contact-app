@@ -7,20 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-{{ date('Y') }}
-<br />
-{{ 3 + 7}}
-<br />
-{!! "<h3>Hello</h3>" !!}
-<?= "<h3>Hello</h3>" ?>
-<h2>
-    Hello @{{ name }}
-</h2>
+<h1>Contact App</h1>
+<div>
+    <a href='{{ route('contacts.index') }}'>All contacts</a>
+    <a href='{{ route('contacts.create') }}'>Add contact</a>
+    <a href='{{ route('contacts.show', 1) }}'>Show contact</a>
+</div>
 
-@php
-    $message = "Hello world";
-@endphp
-<h2>{{ $message }}</h2>
-{{-- This is a comment --}}
 </body>
 </html>
