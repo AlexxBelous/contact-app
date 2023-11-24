@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 function getContacts()
 {
     return [
-        1 => ['name' => 'Name 1', 'phone' => '1234567890'],
+        1 => ['name' => 'Name 1', 'phone' => '1231231231'],
         2 => ['name' => 'Name 2', 'phone' => '2345678901'],
-        3 => ['name' => 'Name 3', 'phone' => '3456789012'],
+        3 => ['name' => 'Name 3', 'phone' => '0992945545'],
     ];
 }
 

@@ -49,7 +49,8 @@
     </div>
 </nav>
 
-{{-- content --}}
+
+@yield('content')
 
 
 <script src="{{ asset('js/jquery.min.js') }}"></script>
