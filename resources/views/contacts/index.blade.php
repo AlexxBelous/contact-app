@@ -12,7 +12,8 @@
                             <div class="d-flex align-items-center">
                                 <h2 class="mb-0">All Contacts</h2>
                                 <div class="ml-auto">
-                                    <a href="{{ route('contacts.create') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Add
+                                    <a href="{{ route('contacts.create') }}" class="btn btn-success"><i
+                                            class="fa fa-plus-circle"></i> Add
                                         New</a>
                                 </div>
                             </div>
@@ -31,29 +32,31 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <?php foreach ($contacts as $id => $contact) : ?>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>{{ $contact['name'] }}</td>
-                                    <td>{{ $contact['phone'] }}</td>
-                                    <td>alfred@test.com</td>
-                                    <td>Company one</td>
-                                    <td width="150">
-                                        <a href="{{ route('contacts.show', $id) }}" class="btn btn-sm btn-circle btn-outline-info" title="Show"><i
-                                                class="fa fa-eye"></i></a>
-                                        <a href="form.html" class="btn btn-sm btn-circle btn-outline-secondary"
-                                           title="Edit"><i class="fa fa-edit"></i></a>
-                                        <a href="#" class="btn btn-sm btn-circle btn-outline-danger" title="Delete"
-                                           onclick="confirm('Are you sure?')"><i class="fa fa-times"></i></a>
-                                    </td>
-                                </tr>
 
-                                <?php endforeach; ?>
-
+                                @forelse($contacts as $id => $contact)
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>{{ $contact['name'] }}</td>
+                                        <td>{{ $contact['phone'] }}</td>
+                                        <td>alfred@test.com</td>
+                                        <td>Company one</td>
+                                        <td width="150">
+                                            <a href="{{ route('contacts.show', $id) }}"
+                                               class="btn btn-sm btn-circle btn-outline-info" title="Show"><i
+                                                    class="fa fa-eye"></i></a>
+                                            <a href="form.html" class="btn btn-sm btn-circle btn-outline-secondary"
+                                               title="Edit"><i class="fa fa-edit"></i></a>
+                                            <a href="#" class="btn btn-sm btn-circle btn-outline-danger"
+                                               title="Delete"
+                                               onclick="confirm('Are you sure?')"><i class="fa fa-times"></i></a>
+                                        </td>
+                                    </tr>
+                                @empty
+                                    <p>No contact found!!!</p>
+                                @endforelse
 
                                 </tbody>
                             </table>
-
                             <nav class="mt-4">
                                 <ul class="pagination justify-content-center">
                                     <li class="page-item disabled">
