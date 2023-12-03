@@ -28,8 +28,11 @@ Route::get('/', function () {
 
 Route::get('/contacts', function () {
 //    $companies = [
-//        1 => ['name' => 'Company One', 'contacts' => 3],
-//        2 => ['name' => 'Company Two', 'contacts' => 5],
+//        1 => ['name' => 'Apple Inc.', 'contacts' => 3],
+//        2 => ['name' => 'Microsoft Corporation', 'contacts' => 5],
+//        3 => ['name' => 'Google LLC', 'contacts' => 8],
+//        4 => ['name' => 'Amazon.com Inc.', 'contacts' => 4],
+//        5 => ['name' => 'Facebook, Inc.', 'contacts' => 6],
 //    ];
     $contacts = getContacts();
     return view('contacts.index', compact('contacts'));
